@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>奖</title>
+<style>
+body {
+background: url("bg1.jpg") no-repeat center top;
+}
+input {
+width: 36px;
+}
+#dashboard {
+width: 900px;
+margin: auto;
+}
+
+#dashboard input {
+border: 1px solid black;
+width: 158px;
+height: 30px;
+margin: 0.2em 0.5em;
+font-weight: bolder;
+font-family: 'Arial', '黑体';
+font-size: 14px;
+text-align: center;
+}
+
+#no2 {
+background: white;
+font-weight: bolder;
+font-family: 'Arial', '黑体';
+font-size: 38px;
+}
+
+</style>
+</head>
+<body>
+
+  <form id="setup" style="position:absolute; top: 6px; left: 3px;">
+      <label>号码范围：<input name="min" id="min" value="1"></label>
+      <label>到 <input name="max" id="max" value="500"></label>
+      <br />
+      <label><!-- 一等奖： --><input name="l1_num" id="l1_num" value="10"> 位</label>
+      <a href="#l1_start" id="l1_start">摇奖</a>
+      <a href="#l1_stop" id="l1_stop">开</a>
+      <div style="display:none;">
+      <br />
+      <label>二等奖：<input name="l2_num" id="l2_num" value="50"> 位</label>
+      <label>分 <input name="l2_group" id="l2_group" value="50"> 组</label>
+      <br />
+      <a href="#l2_start" id="l2_start">开始</a>
+      <br />
+      <a href="#info" id="l_info">显示中奖者</a>
+      </div>
+  </form>
+
+
+  <div id="dashboard">
+
+    <div id="no1">
+    </div>
+
+    <div id="no2">
+    </div>
+
+    <div id="info">
+    </div>
+
+  </div>
+
+</body>
+<script src="mootools.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</html>
